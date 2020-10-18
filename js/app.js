@@ -24,6 +24,7 @@ $(function () {
 	});
 
 	$('#calc').click(() => {
+		ga('send', 'event', 'calc', 'click');
 		amount = $('#amount').val();
 		cc = $('select[name=crypto]').val();
 		if(amount > 0 && amount <= stock) {
@@ -43,6 +44,7 @@ $(function () {
 
 
 	$('#buy').click(() => {
+		ga('send', 'event', 'buy', 'click');
 		name = $('#name').val().trim();
 		server = $('select[name=server]').val();
 		cc = $('select[name=crypto]').val();
